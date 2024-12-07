@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.service;
 
 import com.example.demo.config.RabbitMQConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
