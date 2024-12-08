@@ -51,30 +51,66 @@
     	</dependency>
 		<dependency>
 			<groupId>io.gatling</groupId>
-			<artifactId>gatling-app</artifactId>
-			<version>3.7.2</version>
+			<artifactId>gatling-core</artifactId>
+			<version>3.9.5</version>
 		</dependency>
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>gatling-http</artifactId>
+			<version>3.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>gatling-app</artifactId>
+			<version>3.9.5</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>io.gatling.highcharts</groupId>
 			<artifactId>gatling-charts-highcharts</artifactId>
-			<version>3.7.2</version>
+			<version>3.9.5</version>
+		</dependency>
+		<!-- Gatling Core for Java -->
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>gatling-core-java</artifactId>
+			<version>3.9.5</version>
+		</dependency>
+		<!-- Gatling HTTP for Java -->
+		<dependency>
+			<groupId>io.gatling</groupId>
+			<artifactId>gatling-http-java</artifactId>
+			<version>3.9.5</version>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>4.5.6</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>io.gatling</groupId>-->
-<!--				<artifactId>gatling-maven-plugin</artifactId>-->
-<!--				<version>4.2.9</version>-->
+			<plugin>
+				<groupId>io.gatling</groupId>
+				<artifactId>gatling-maven-plugin</artifactId>
+				<version>4.11.0</version> <!-- Check for the latest version -->
 <!--				<configuration>-->
-<!--					<simulationClass>org.baeldung.EmployeeRegistrationSimulation</simulationClass>-->
+<!--					<simulationClass></simulationClass>-->
 <!--				</configuration>-->
-<!--			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 
