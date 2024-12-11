@@ -13,5 +13,15 @@ services:
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
 
+  db:
+    image: postgres:15-alpine
+    container_name: my-postgres-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
+
 volumes:
   rabbitmq_data:

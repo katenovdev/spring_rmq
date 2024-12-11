@@ -20,7 +20,7 @@ public class MessageProducerService {
     }
 
     public void sendNotification(Book book) {
-        String message = String.format("New book added: %s by %s", book.title(), book.author());
+        String message = String.format("New book added: %s by %s", book.getTitle(), book.getAuthor());
         rabbitTemplate.convertAndSend(RabbitMQConfig.QUEUE_NAME, message);
     }
 }
